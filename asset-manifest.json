@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/the_greatest/static/css/main.2bfa39f3.css",
+    "main.js": "/the_greatest/static/js/main.04933ea1.js",
+    "static/media/ubayda.png": "/the_greatest/static/media/ubayda.b2a327c8ad69c5c453c6.png",
+    "static/media/said.png": "/the_greatest/static/media/said.b2f91a64088c023fdfd5.png",
+    "static/media/Abdurahmon.png": "/the_greatest/static/media/Abdurahmon.cb8d107b6b469d0d493b.png",
+    "static/media/zubayr.png": "/the_greatest/static/media/zubayr.170de24e9bd3627995c5.png",
+    "static/media/sad.png": "/the_greatest/static/media/sad.ce9e4b8b743699a59366.png",
+    "static/media/image(4).png": "/the_greatest/static/media/image(4).6d15b7c22a6fc2fbf1cf.png",
+    "static/media/image(3).png": "/the_greatest/static/media/image(3).5532c742fe1d284d3188.png",
+    "static/media/image.png": "/the_greatest/static/media/image.a342c8c4d6dd10e70aac.png",
+    "static/media/image(2).png": "/the_greatest/static/media/image(2).a3b44b18d4a67f7188a5.png",
+    "static/media/icon.png": "/the_greatest/static/media/icon.192de43f0243023bee2b.png",
+    "static/media/image(1).png": "/the_greatest/static/media/image(1).df4095fb960297e27077.png",
+    "index.html": "/the_greatest/index.html",
+    "main.2bfa39f3.css.map": "/the_greatest/static/css/main.2bfa39f3.css.map",
+    "main.04933ea1.js.map": "/the_greatest/static/js/main.04933ea1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bfa39f3.css",
+    "static/js/main.04933ea1.js"
+  ]
+}
