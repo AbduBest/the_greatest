@@ -1,13 +1,338 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background: #333;
+}
+
+/* nav */
+nav {
+    margin: 15px auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: default;
+}
+
+nav .name{
+    font-size: 45px;
+    font-weight: 900;
+    color: cyan;
+    text-shadow: 2px 2px #ff3c7b;
+}
+nav .right {
+    width: 50px;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+nav .right img{
+    width: 35px;
+    transition: 5s;
+    height: 35px;
+    cursor: pointer;
+    z-index: 3;
+}
+nav .right .side_bar{
+    width: 330px;
+    height: 110vh;
+    z-index: 1;
+    background: #3C4048;
+    display: flex;
+    margin-top: -2em;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.4s;
+    transform: translateX(-50px);
+    position: fixed;
+    
+}
+.aki{
+    margin-top: 25px;
+}
+nav .right .side_bar2{
+    display: flex;
+    margin-top: -1.25em;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.4s;
+    transform: translateX(500px);
+    position: fixed;
+}
+nav .right a:nth-child(1){
+    margin-top: 20px;
+}
+nav .right a{
+    text-align: right;
+    padding: 15px 85px 15px 0;
+    color: aqua;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: 0.5s;
+}
+nav .right a:hover{
+    padding: 18px 100px 18px 0;
+    color: #CDFCF6;
+    font-size: 1.17em;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+}
+
+/* end nav */
+
+/* card */
+.card {
+    margin-top: 200px;
+    margin-left: 38.55%;
+    position: relative;
+    width: 350px;
+    z-index: 1;
+    height: 190px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.card .lines {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.card .lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, cyan, cyan, cyan, transparent);
+    animation: animate 4s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* end ANIMATION */
+.card .lines::after {
+    content: '';
+    background: #292929;
+    inset: 3px;
+    position: absolute;
+}
+
+.card .imgBX {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    background: #000;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.card:hover .imgBX {
+    width: 230px;
+    height: 230px;
+}
+
+.card .imgBX::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+    animation: new_animate 6s linear infinite;
+}
+
+.card .imgBX::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 130px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+    animation: new_animate 6s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes new_animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+/* end ANIMATION */
+.card .imgBX::after {
+    content: '';
+    position: absolute;
+    background: #292929;
+    border-radius: 50%;
+    inset: 5px;
+}
+
+.card .imgBX .not_bad {
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    left: 6px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    filter: grayscale(1);
+}
+.card .imgBX .bad {
+    position: absolute;
+    z-index: 1;
+    top: -9.5px;
+    left: -9.5px;
+    width: calc(100% + 19px);
+    height: calc(100% + 19px);
+    filter: grayscale(1);
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details {
+    padding: 45px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(145px);
+}
+.card .content .details .ohno{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin: 17px 0 0 -36px;
+    transition: 0.4s;
+}
+.card:hover .content .details .ohno{
+    transition: 0.4s;
+    margin: 25px 0 0 -36px;
+}
+.card .content .details .ohno h2{
+    flex: 1;
+    font-size: 1.15em;
+    padding: 10px;
+    color: #45f3ff;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+.card .content .details .ohnoh{
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 -25px -36px;
+}
+.card .content .details .ohnoh h2{
+    flex: 1;
+    font-size: 1.15em;
+    padding: 10px;
+    color: #45f3ff;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+.card:hover .content .details {
+    transform: translateY(0px);
+}
+
+.card .content .details h1 {
+    letter-spacing: 2px;
+    font-size: 1.25em;
+    color: #45f3ff;
+    font-weight: 900;
+    line-height: 1.2em;
+    transition: 0.4s;
+}
+
+.card:hover .content .details h1 {
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    transition: 0.4s;
+    color: #45f3ff;
+    font-weight: 900;
+    line-height: 1.2em;
+}
+
+.card .content .details h1 span {
+    font-size: 0.75em;
+    font-weight: 5000;
+    color: #fff;
+}
+
+.card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 27px 0 -10px -45px;
+}
+
+.card .content .details .data h2 {
+    font-size: 1.1em;
+    padding: 10px;
+    color: #45f3ff;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+/* end card */
+
+.card .content .details .abubakr {
+    display: flex;
+    justify-content: space-between;
+    margin: 27px 0 -10px -45px;
+}
+
+.card .content .details .abubakr h2 {
+    font-size: 1.1em;
+    padding: 10px;
+    color: #45f3ff;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+hr{
+    background: #ff3c7b;
+    border: 1px solid #ff3c7b;
+    outline: none;
+    border-radius: 15px;
 }
